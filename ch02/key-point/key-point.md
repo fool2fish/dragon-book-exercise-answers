@@ -12,7 +12,7 @@
 
 2. （消除了左递归的）语法制导翻译方案
 
-    expr -> term test
+    expr -> term rest
     
     rest -> + term { print('+') } rest | - term { print('+') } rest | ε
     
