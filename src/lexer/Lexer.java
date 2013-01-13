@@ -5,19 +5,22 @@ import java.util.*;
 
 public class Lexer {
 	private int line = 1;
-	private int cursor = 0;
 	private char peek = ' ';
+	private InputStream stream;
 	private Hashtable<String, Word> words = new Hashtable<String, Word>();
-	public Lexer(){
+	
+	public Lexer(InputStream stream){
+		this.stream = stream;
 		reserve(new Word(Tag.TRUE, "true"));
 		reserve(new Word(Tag.FALSE, "false"));
 	}
-	void reserve(Word t){
+	
+	private void reserve(Word t){
 		words.put(t.lexeme, t);
 	}
 	
-	public Token scan() throws IOException{
-		for(;;peek = (char) System.in.read()){
+	public Token scan() throws IOException, SyntaxException{
+		for(;;peek = (char)stream.read()){
 			if(peek == ' ' || peek == '\t'){
 				continue;
 			}else if(peek == '\n'){
@@ -27,20 +30,60 @@ public class Lexer {
 			}
 		}
 		
-		if(Character.isDigit(peek)){
-			int v = 0;
-			do{
-				v = v * 10 + Character.digit(peek, 10);
-				peek = (char)System.in.read();
-			}while(Character.isDigit(peek));
-			return new Num(v);
+		// handle comment
+		if(peek == '/'){
+			peek = (char) stream.read();
+			if(peek == '/'){
+				// single line comment
+				for(;;peek = (char)stream.read()){
+					if(peek == '\n'){
+						break;
+					}
+				}
+			}else if(peek == '*'){
+				// block comment
+				char prevPeek = ' ';
+				for(;;prevPeek = peek, peek = (char)stream.read()){
+					if(prevPeek == '*' && peek == '/'){
+						break;
+					}
+				}
+			}else{
+				throw new SyntaxException();
+			}
 		}
 		
+		// handle relation sign
+		if("<=!>".indexOf(peek) > -1){
+			StringBuffer b = new StringBuffer();
+			b.append(peek);
+			peek = (char)stream.read();
+			if(peek == '='){
+				b.append(peek);
+			}
+			return new Rel(b.toString());
+		}
+		
+		// handle number, no type sensitive
+		if(Character.isDigit(peek) || peek == '.'){
+			Boolean isDotExist = false;
+			StringBuffer b = new StringBuffer();
+			do{
+				if(peek == '.'){
+					isDotExist = true;
+				}
+				b.append(peek);
+				peek = (char)stream.read();
+			}while(isDotExist == true ? Character.isDigit(peek) : Character.isDigit(peek) || peek == '.');
+			return new Num(new Float(b.toString()));
+		}
+		
+		// handle word
 		if(Character.isLetter(peek)){
 			StringBuffer b = new StringBuffer();
 			do{
 				b.append(peek);
-				peek = (char)System.in.read();
+				peek = (char)stream.read();
 			}while(Character.isLetterOrDigit(peek));
 			String s = b.toString();
 			Word w = words.get(s);
