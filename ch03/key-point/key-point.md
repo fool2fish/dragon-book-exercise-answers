@@ -1,8 +1,8 @@
 # 第3章要点
 
-### 1. 正则表达式到 NFA、DFA 的转换
+### 1. 从 NFA、DFA 到正则表达式的转换
 
-
+http://courses.engr.illinois.edu/cs373/sp2009/lectures/lect_08.pdf
 
 ### 2. KMP 及其扩展算法(p87)
 
