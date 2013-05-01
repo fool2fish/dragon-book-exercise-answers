@@ -2,6 +2,8 @@
 
 Compilers Principles, Techniques, &amp; Toos (purple dragon book) second edition practice answer.
 
+声明：免费使用，授权转载
+
 ## 1. 如何使用
 
 - 请首先 **star** 或 **fork** 本项目。
