@@ -3,3 +3,4 @@
 .settings
 .classpath
 build/
+*.out
