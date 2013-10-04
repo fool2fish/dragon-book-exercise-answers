@@ -11,7 +11,6 @@ int f(int x, int *py, int **ppz) {
 int main() {
 	int c = 4;
 	int *b = &c;
-	int *a = &b;
-    printf(f(c, *b, **a));
-
+	int **a = &b;
+	printf("%d\n", f(c, b, a));
 }
