@@ -1,4 +1,5 @@
-# Compilers Principles, Techniques, &amp; Toos (purple dragon book) second edition exercise answers. 编译原理（紫龙书）中文第2版习题答案
+# Compilers Principles, Techniques, &amp; Toos (purple dragon book) second edition exercise answers.
+# 编译原理（紫龙书）中文第2版习题答案
 
 声明：免费使用，授权转载
 
