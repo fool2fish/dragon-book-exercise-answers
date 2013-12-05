@@ -17,7 +17,7 @@ I need to get some other skills to deal with the rest of this book, so update st
 - Bug report, questions and discussion are welcome, you can post an [issue](https://github.com/fool2fish/dragon-book-practice-answer/issues/new) or pull a request.
 - All graphs are painted by [yed](http://www.yworks.com/en/products_yed_about.html), it is simple, cross-platform and free.
 - There are some key-point.md file, key points and difficult points are summarized in them.
-- As we know only teacher can buy the answer book, so I don't know the standard answerå, but I tried my best to keep the correctness, if you found any bug, please [tell me](https://github.com/fool2fish/dragon-book-practice-answer/issues/new), thanks.
+- As we know only teacher can buy the answer book, so I don't know the standard answer, but I tried my best to keep the correctness, if you found any bug, please [tell me](https://github.com/fool2fish/dragon-book-practice-answer/issues/new), thanks.
 
 ### License
 
