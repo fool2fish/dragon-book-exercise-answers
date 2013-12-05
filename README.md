@@ -21,4 +21,4 @@ I need to get some other skills to deal with the rest of this book, so update st
 
 ### License
 
-It is still under consideration. Anyone know with is suitable?
+It is still under consideration. Anyone know witch is suitable?
