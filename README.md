@@ -1,14 +1,6 @@
 # Compilers Principles, Techniques, &amp; Tools (purple dragon book) second edition exercise answers
 # 编译原理（紫龙书）中文第2版习题答案
 
-If you [share your experience with me](https://github.com/fool2fish/dragon-book-practice-answer/issues/new), I'll be very grateful.
-
-### Note
-
-I need to get some other skills to deal with the rest of this book, so update stopped temporarily, I'll restore it at the beginning of 2014.
-
-2013.12.5
-
 ### Something I hope you know before go into the answers
 
 - First, please **watch** or **star** this repo, I'll be more happy if you **follow** me.
