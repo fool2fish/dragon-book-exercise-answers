@@ -1,0 +1,16 @@
+
+digraph {
+	rankdir = LR
+	/* label   = "最小化DFA" */
+
+	node [shape = circle]
+
+	start[shape = none, label = ""]
+	C [shape = doublecircle]
+
+	start 	->	A
+	A 		->	A [label = "a", dir = back]
+	A		->	B 		->	C [label = "b"]
+	B		->	A [label = "a"]
+	C		->	C [label = "a.b", dir = back]
+}
