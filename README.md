@@ -12,6 +12,3 @@
 ### License
 
 It is still under consideration. Anyone know witch is suitable?
-
-### 话说原repo主是怎么上传图片到f.cloud.github.com的？ 
-### 我放在github上图片显示不出来是为什么？  只能放在baidu网盘里=_=
