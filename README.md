@@ -12,3 +12,5 @@
 ### License
 
 It is still under consideration. Anyone know witch is suitable?
+
+### Graphviz 的dot用来画状态图也很方便
