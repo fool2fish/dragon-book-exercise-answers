@@ -10,6 +10,7 @@ letter  [A-Za-z] /* Exercise 3.5.1 - c) We can allow the underscore here, but I 
 digit   [0-9]
 id      {letter}_*(({letter}_*)|({digit}_*))* /* Exercise 3.5.1 - c) */
 number  {digit}+(\.{digit}+)?(E[+-]?{digit }+)?
+doubleq \"
 
 %%
 {ws} {/* no action and no return */}
@@ -18,6 +19,7 @@ while { return (WHILE); /* Exercise 3.5.1 - a) */ }
 then {return (THEN); }
 else {return (ELSE) ; }
 {id} {yylval = (int) installID(); return (ID); }
+{doubleq}.*{doubleq} { yylval = (int) installString(); return (STRING); }
 {number} {yylval = (int) installNum(); return (NUMBER); }
 "<" {yylval = LT; return (RELOP); }
 "<=" {yylval = LE; return (RELOP);}
@@ -33,4 +35,8 @@ and whose length is yyleng, into the symbol table and return a pointer thereto *
 }
 
 int installNum() { /* similar to installID, but puts numerical constants into a seperate table */ 
+}
+
+int installString() {
+/* ... */
 }
