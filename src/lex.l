@@ -1,27 +1,28 @@
 %{
-/ * def init ions of manifest constant s
-LT , LE , EQ , NE , GT , GE ,
-IF , THEN , ELSE , ID , NUMBER , RELOP */
+/* definitions of manifest constants
+LT, LE, EQ, NE, GT, GE,
+IF, THEN, ELSE, ID, NUMBER, RELOP */
 %}
-/ * regular definitions */
+/* regular definitions */
 delim   [ \t\n]
 ws      {delim}+
-letter  [A-Za-z]
+letter  [A-Za-z] /* Exercise 3.5.1 - c) We can allow the underscore here, but I think it's better in the ID definition. */
 digit   [0-9]
-id      {letter} ({letter} l {digit } ) *
-number  {digit}+ (\ . {digit}+ ) ? (E [+-] ?{digit }+ ) ?
+id      {letter}_*(({letter}_*)|({digit}_*))* /* Exercise 3.5.1 - c) */
+number  {digit}+(\.{digit}+)?(E[+-]?{digit }+)?
 
 %%
 {ws} {/* no action and no return */}
 if   {return (IF); }
+while { return (WHILE); /* Exercise 3.5.1 - a) */ }
 then {return (THEN); }
 else {return (ELSE) ; }
 {id} {yylval = (int) installID(); return (ID); }
 {number} {yylval = (int) installNum(); return (NUMBER); }
 "<" {yylval = LT; return (RELOP); }
 "<=" {yylval = LE; return (RELOP);}
-"==" {yylval = EQ; return (RELOP); /* */ }
-"!=" {yylval = NE; return (RELOP ); /* */}
+"==" {yylval = EQ; return (RELOP); /* Exercise 3.5.1 - b) */ }
+"!=" {yylval = NE; return (RELOP ); /* Exercise 3.5.1 - b) */ }
 ">" {yylval = GT; return (RELOP); }
 ">=" {yylval = GE; return (RELOP); }
 
