@@ -6,9 +6,14 @@ IF, THEN, ELSE, ID, NUMBER, RELOP */
 /* regular definitions */
 delim   [ \t\n]
 ws      {delim}+
-letter  [A-Za-z] /* Exercise 3.5.1 - c) We can allow the underscore here, but I think it's better in the ID definition. */
+
+/* Exercise 3.5.1 - c) We can allow the underscore here, but I think it's better in the ID definition. */
+letter  [A-Za-z]
 digit   [0-9]
-id      {letter}_*(({letter}_*)|({digit}_*))* /* Exercise 3.5.1 - c) */
+
+/* Exercise 3.5.1 - c) */
+id      {letter}_*({letter}_*|{digit}_*)*
+
 number  {digit}+(\.{digit}+)?(E[+-]?{digit }+)?
 doubleq \"
 
