@@ -19,7 +19,7 @@ while { return (WHILE); /* Exercise 3.5.1 - a) */ }
 then {return (THEN); }
 else {return (ELSE) ; }
 {id} {yylval = (int) installID(); return (ID); }
-{doubleq}.*{doubleq} { yylval = (int) installString(); return (STRING); }
+{doubleq}.*{doubleq} { yylval = (int) installString(); return (STRING); /* Exercise 3.5.1 - d) */}
 {number} {yylval = (int) installNum(); return (NUMBER); }
 "<" {yylval = LT; return (RELOP); }
 "<=" {yylval = LE; return (RELOP);}
