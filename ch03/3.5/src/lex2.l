@@ -36,4 +36,3 @@ int starts_vowel(char *c){
 			return 0;
  	}
 }
-
