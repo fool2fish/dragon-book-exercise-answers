@@ -26,15 +26,15 @@ int installID(){
 	example:
 		yytext: foO
 		yytext = lowercase(yytext)
-		installID(yytext)
+		installID()
 
 		yytext: Strstr
 		yytext = lowercase(yytext)
-		installID(yytext)
-
+		yylval = (int) installID()
+		
 		yytext: strstr (already exists in the symbol table)
 		yytext = lowercase(yytext)
-		installID(yytext)
+		yylval = (int) installID()
 
 	*/
 }
