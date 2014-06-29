@@ -2,7 +2,6 @@
 %}
 
 delim 	[ \t]
-newline	\n
 ws 			{delim}+
 letter 	[a-zA-Z]
 word   	{letter}+
@@ -14,7 +13,6 @@ word   	{letter}+
 		printf("%say", yytext);
 	else
 		printf("%s%cay", yytext+1, yytext[0]);
-{newline} { printf("\n"); }
 . { printf("%s", yytext); }
 %%
 
