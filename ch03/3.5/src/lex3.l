@@ -10,7 +10,7 @@ while 	(?i:while)
 
 from	(?i:from)
 select	(?i:select)
-id		{letter}({letter}|{digit})*
+id	{letter}({letter}|{digit})*
 
 %%
 {while} 	{ printf("WHILE KEYWORD"); return (WHILE); }
