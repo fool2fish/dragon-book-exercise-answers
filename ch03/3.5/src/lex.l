@@ -45,3 +45,4 @@ int installNum() { /* similar to installID, but puts numerical constants into a 
 int installString() {
 /* ... */
 }
+
