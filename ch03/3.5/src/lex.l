@@ -12,7 +12,7 @@ letter  [A-Za-z]
 digit   [0-9]
 
 /* Exercise 3.5.1 - c) */
-id      {letter}_*({letter}_*|{digit}_*)*
+id      {letter}({letter}|{digit}|_)*
 
 number  {digit}+(\.{digit}+)?(E[+-]?{digit }+)?
 doubleq \"
