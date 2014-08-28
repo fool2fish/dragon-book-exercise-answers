@@ -26,7 +26,7 @@ int installID(){
 	example:
 		yytext: foO
 		yytext = lowercase(yytext)
-		installID()
+		yylval = (int) installID()
 
 		yytext: Strstr
 		yytext = lowercase(yytext)
