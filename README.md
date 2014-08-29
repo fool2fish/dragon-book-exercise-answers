@@ -11,4 +11,4 @@
 
 ### License
 
-It is still under consideration. Anyone know witch is suitable?
+It is still under consideration. Anyone know which is suitable?
