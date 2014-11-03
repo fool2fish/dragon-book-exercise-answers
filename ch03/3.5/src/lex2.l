@@ -12,7 +12,7 @@ word   	{letter}+
 	if (starts_vowel(yytext)) 
 		printf("%say", yytext);
 	else
-		printf("%s%cay", yytext+1, yytext[0]);
+		printf("%s%cay", yytext+1, yytext[0]);}
 . { printf("%s", yytext); }
 %%
 
