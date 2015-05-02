@@ -1,14 +1,8 @@
-# Compilers Principles, Techniques, &amp; Tools (purple dragon book) second edition exercise answers
+
 # 编译原理（紫龙书）中文第2版习题答案
 
-### Something I hope you know before go into the answers
+### 关于本文档
 
-- First, please **watch** or **star** this repo, I'll be more happy if you **follow** me.
-- Bug report, questions and discussion are welcome, you can post an [issue](https://github.com/fool2fish/dragon-book-practice-answer/issues/new) or [pull a request](https://help.github.com/articles/using-pull-requests).
-- All graphs are painted by [yed](http://www.yworks.com/en/products_yed_about.html), it is simple, cross-platform and free.
-- There are some key-point.md file, key points and difficult points are summarized in them.
-- As we know only teacher can buy the answer book, so I don't know the standard answer, but I tried my best to keep the correctness, if you found any bug, please [tell me](https://github.com/fool2fish/dragon-book-practice-answer/issues/new), thanks.
+这个文档是从 fool2fish 鱼姐那里 fork 来的，但是最后一次更新是14年九月了，这份答案现在并不完善，所以你在学习的过程中有了这个文档未收录部分的答案,或者发现错误，欢迎提交[PR](https://github.com/DongHuaUniversity/dragon-book-exercise-answers/pulls)。
 
-### License
-
-It is still under consideration. Anyone know which is suitable?
+当然，本仓库所有更新也会向原作者提交PR。但是这里会最快讨论答案的正误。
