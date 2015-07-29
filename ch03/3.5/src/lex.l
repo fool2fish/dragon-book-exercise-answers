@@ -1,7 +1,7 @@
 %{
-/* definitions of manifest constants
+/* definitions of manifest constants */
 LT, LE, EQ, NE, GT, GE,
-IF, THEN, ELSE, ID, NUMBER, RELOP */
+IF, THEN, ELSE, ID, NUMBER, RELOP, WHILE
 %}
 /* regular definitions */
 delim   [ \t\n]
