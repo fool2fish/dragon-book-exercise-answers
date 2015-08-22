@@ -9,7 +9,7 @@
 
 ---
 
-- [Read the book](./_book)
+- [Read the book](http://jcf94.github.io/dragon-book-exercise-answers/book)
 
 ---
 
