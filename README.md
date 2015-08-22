@@ -7,7 +7,13 @@
 - I have just started to read this book and forked this project.
 - For better reading, I make this project a gitbook.
 
-- Contact to [Jcf94](http://jcf94.github.io/)
+---
+
+- [Read the book](./_book)
+
+---
+
+- Contact Me: [Jcf94](http://jcf94.github.io/)
 
 ---
 
