@@ -6,7 +6,12 @@
 
 - I have just started to read this book and forked this project.
 - For better reading, I make this project a gitbook.
-- Jcf94
+
+- Contact to [Jcf94](http://jcf94.github.io/)
+
+---
+
+- Below is some words from the origin author.
 
 ---
 
