@@ -1,0 +1,275 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+ <title>Lecture 10: October 8, 2012</title></head><body>
+ <h1>COMS W3261<br>
+  Computer Science Theory<br>
+  Lecture 10: October 8, 2012<br>
+  Properties of Context-Free Languages
+ </h1>
+
+<h2>Outline</h2>
+ <ul>
+  <li>Eliminating useless symbols</li>
+  <li>Eliminating &#949;-productions</li>
+  <li>Eliminating unit productions</li>
+  <li>Chomsky normal form</li>
+  <li>Pumping lemma for CFL's</li>
+  <li>Cocke-Younger-Kasami algorithm</li>
+ </ul>
+
+ <h2>1. Eliminating Useless Symbols from a CFG</h2>
+ <ul>
+  <li>A symbol X is <i>useful</i> for a CFG if there is a derivation of the
+      form S &#8658;<sup>*</sup> &#945;X&#946; &#8658;<sup>*</sup> w
+      for some string of terminals w.</li>
+  <li>If X is not useful, then we say X is <i>useless</i>.</li>
+  <li>To be useful, a symbol X needs to be</li>
+  <ol>
+   <li><i>generating</i>; that is, X needs to be able to derive some string of terminals.</li>
+   <li><i>reachable</i>; that is, there needs to be a derivation of the form
+       S &#8658;<sup>*</sup> &#945;X&#946; where &#945; and &#946; 
+       are strings of nonterminals and terminals.</li>
+  </ol>
+  <li>To eliminate useless symbols from a grammar, we
+  <ol>
+   <li>identify
+       the nongenerating symbols and eliminate all productions containing
+       one or more of these symbols, and then</li>
+   <li>eliminate all productions containing symbols that are not reachable
+       from the start symbol.</li>
+  </ol>
+  </li><li>In the grammar</li>
+<pre><code>S &#8594; AB | a
+A &#8594; b</code></pre>
+  <dt><code>S</code>, <code>A</code>, <code>a</code>, and
+      <code>b</code> are generating. <code>B</code> is not generating.</dt>
+  <dt>Eliminating the productions containing the nongenerating symbols we get</dt>
+<pre><code>S &#8594; a
+A &#8594; b</code></pre>
+  <dt>Now we see <code>A</code> is not reachable from <code>S</code>, so
+      we can eliminate the second production to get</dt>
+<pre><code>S &#8594; a</code></pre>
+ <li>The generating symbols can be computed inductively bottom-up from the
+     set of terminal symbols.</li>
+ <li>The reachable symbols can be computed inductively starting from <code>S</code>.</li>
+ </ul>
+
+ <h2>2. Eliminating &#949;-productions from a CFG</h2>
+ <ul>
+  <li>If a language L has a CFG, then L - { &#949; } has a CFG without
+      any &#949;-productions.</li>
+  <li>A nonterminal A in a grammar is <i>nullable</i> if
+      A &#8658;<sup>*</sup> &#949;.</li>
+  <li>The nullable nonterminals can be determined iteratively.</li>
+  <li>We can eliminate all &#949;-productions in a grammar as follows:</li>
+  <ul>
+   <li>Eliminate all productions with &#949; bodies.</li>
+   <li>Suppose A &#8594; X<sub>1</sub>X<sub>2</sub> ... X<sub><i>k</i></sub>
+       is a production and <i>m</i> of the <i>k</i> X<sub><i>i</i></sub>'s
+       are nullable. Then add the 2<sup><i>m</i></sup> versions of this
+       production where the nullable X<sub><i>i</i></sub>'s are present
+       or absent.  (But if all symbols are nullable, do not add an
+       &#949;-production.)</li>
+  </ul>
+  <li>Let us eliminate the &#949;-productions from the grammar G</li>
+<pre><code>S &#8594; AB
+A &#8594; aAA | &#949;
+B &#8594; bBB | &#949;</code></pre>
+  <dt>S, A and B are nullable.</dt>
+  <dt>For the production <code>S &#8594; AB</code>
+      we add the productions <code>S &#8594; A | B</code></dt><dt>
+  </dt><dt>For the production <code>A &#8594; aAA</code>
+      we add the productions <code>A &#8594; aA | a</code></dt><dt>
+  </dt><dt>For the production <code>B &#8594; bBB</code>
+      we add the productions <code>B &#8594; bB | b</code></dt><dt>
+  </dt><dt>The resulting grammar H with no &#949;-productions is</dt>
+<pre><code>S &#8594; AB | A | B
+A &#8594; aAA | aA | a
+B &#8594; bBB | bB | b</code></pre>
+  <dt>We can prove that L(H) = L(G) - { &#949; }.</dt>
+ </ul>
+
+ <h2>3. Eliminating Unit Productions from a CFG</h2>
+ <ul>
+  <li>A <i>unit</i> production is one of the form <code>A &#8594; B</code>
+      where both <code>A</code> and <code>B</code> are nonterminals.</li>
+  <li>Let us assume we are given a grammar G with no &#949;-productions.</li>
+  <li>From G we can create an equivalent grammar H with no unit productions
+      as follows.</li>
+  <ul>
+   <li>Define (A, B) to be a unit pair if A &#8658;<sup>*</sup> B in G.</li>
+   <li>We can inductively construct all unit pairs for G.</li>
+   <li>For each unit pair (A, B) in G, we add to H the productions
+       A &#8594; &#945; where B &#8594; &#945; is a nonunit production of G.</li>
+  </ul>
+  <li>Consider the standard grammar G for arithmetic expressions:</li>
+<pre><code>E &#8594; E + T | T
+T &#8594; T * F | F
+F &#8594; ( E ) | a</code></pre>
+
+   <dt>The unit pairs are <code>(E,E), (E,T), (E,F), (T,T), (T,F), (F,F)</code>.</dt>
+   <dt>The equivalent grammar H with no unit productions is:</dt><dt>
+<pre><code>E &#8594; E + T | T * F | ( E ) | a
+T &#8594; T * F | ( E ) | a
+F &#8594; ( E ) | a</code></pre>
+
+ </dt></ul>
+
+ <h2>4. Putting a CFG into Chomsky Normal Form</h2>
+ <ul>
+  <li>A grammar G is in Chomsky Normal Form if each production in G is
+      one of two forms:</li>
+  <ol>
+   <li>A &#8594; BC where A, B, and C are nonterminals, or</li>
+   <li>A &#8594; a where a is a terminal.</li>
+  </ol>
+  <li>Every context-free language without &#949; can be generated by
+      a Chomsky Normal Form grammar.</li>
+  <li>Let us assume we have a CFG G with no useless symbols, &#949;-productions,
+      or unit productions. We can transform G into an equivalent Chomsky Normal
+      Form grammar as follows:</li>
+  <ul>
+   <li>Arrange that all bodies of length two or more consist only of nonterminals.</li>
+   <li>Replace bodies of length three or more with a cascade of productions, each with
+       a body of two nonterminals.</li>
+  </ul>
+  <li>Applying these two transformations to the grammar H above, we get:</li>
+
+<pre><code>E &#8594; EA | TB | LC | a
+A &#8594; PT
+P &#8594; +
+B &#8594; MF
+M &#8594; *
+L &#8594; (
+C &#8594; ER
+R &#8594; )
+T &#8594; TB | LC | a
+F &#8594; LC | a</code></pre>
+
+ </ul>
+
+
+
+ <h2>5. Pumping Lemma for CFL's</h2>
+ <ul>
+  <li>For every nonfinite context-free language L,
+      there exists a constant <i>n</i> that depends on L such that
+      for all <i>z</i> in L with |<i>z</i>| &#8805; <i>n</i>, we can write
+      <i>z</i> as <i>uvwxy</i> where</li>
+  <ol>
+   <li><i>vx</i> &#8800; &#949;,</li>
+   <li>|<i>vwx</i>| &#8804; <i>n</i>, and</li>
+   <li>for all <i>i</i> &#8805; 0, the string <i>uv<sup>i</sup>wx<sup>i</sup>y</i> is in L.</li>
+  </ol>
+  <li>Proof: See HMU, pp. 281-282.</li>
+
+  <li>One important use of the pumping lemma is to prove certain
+      languages are not context free.</li>
+  <li>Example: The language L =
+      { <i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i> | <i>n</i> &#8805; 0 }
+      is not context free.</li>
+  <ul>
+   <li>The proof will be by contradiction.  Assume L is context free.
+       Then by the pumping lemma there is a constant <i>n</i> associated with L
+       such that for all <i>z</i> in L with |<i>z</i>| &#8805; <i>n</i>,
+       <i>z</i> can be written as <i>uvwxy</i>
+       such that</li>
+   <ol>
+   <li><i>vx</i> &#8800; &#949;,</li>
+   <li>|<i>vwx</i>| &#8804; <i>n</i>, and</li>
+   <li>for all <i>i</i> &#8805; 0, the string
+       <i>uv<sup>i</sup>wx<sup>i</sup>y</i> is in L.</li>
+   </ol>
+   <li>Consider the string <i>z</i> =
+       <i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i>.</li>
+   <li>From condition (2), <i>vwx</i> cannot contain both <i>a</i>'s and <i>c</i>'s.
+   </li><li>Two cases arise:</li>
+   <ol>
+    <li><i>vwx</i> has no <i>c</i>'s. But then <i>uwy</i> cannot be in L
+        since at least one of <i>v</i> or <i>x</i> is nonempty.</li>
+    <li><i>vwx</i> has no <i>a</i>'s. Again, <i>uwy</i> cannot be in L.</li>
+   </ol>
+   <li>In both cases we have a contradiction, so we must conclude L cannot be context free.
+       The details of the proof can be found in HMU, p. 284.</li>
+  </ul>
+ </ul>
+
+ <h2>6. Cocke-Younger-Kasami Algorithm for Testing Membership in a CFL</h2>
+ <ul>
+  <li>Input: a Chomsky normal form CFG G = (V, T, P, S) and a string <i>w</i> =
+      <i>a</i><sub>1</sub><i>a</i><sub>2</sub> ... <i>a</i><sub><i>n</i></sub>
+      in T*.</li>
+  <li>Output: "yes" if <i>w</i> is in L(G), "no" otherwise.</li>
+  <li>Method: The CYK algorithm is a dynamic programming algorithm that fills in
+      a triangular table <code>X<sub>ij</sub></code> with nonterminals A
+      such that A &#8658;* 
+      <i>a</i><sub><i>i</i></sub><i>a</i><sub><i>i</i>+1</sub> ... 
+      <i>a</i><sub><i>j</i></sub>.</li>
+<pre><code>
+for i = 1 to n do
+  if A &#8594; a<sub>i</sub> is in P then
+    add A to X<sub>ii</sub>
+fill in the table, row-by-row, from row 2 to row n
+  fill in the cells in each row from left-to-right
+    if (A &#8594; BC is in P) and for some i &#8804; k &lt; j
+      (B is in X<sub>ik</sub>) and (C is in X<sub>k+1,j</sub>) then
+        add A to X<sub>ij</sub>
+if S is in X<sub>1n</sub> then
+  output "yes"
+else
+  output "no"
+</code></pre>
+  <li>The algorithm adds nonterminal A to <code>X<sub>ij</sub></code> iff there is a
+      production A &#8594; BC in P where B &#8658;*
+      <i>a<sub>i</sub>a</i><sub><i>i</i>+1</sub> ... <i>a</i><sub><i>k</i></sub>
+
+      and C &#8658;*
+      <i>a</i><sub><i>k</i>+1</sub><i>a</i><sub><i>k</i>+2</sub> ... <i>a</i><sub><i>j</i></sub>.</li>
+
+  <li>To compute entry <code>X<sub>ij</sub></code>, we examine at most
+      <i>n</i> pairs of entries:
+      (<code>X<sub>ii</sub></code>, <code>X<sub>i+1,j</sub></code>),
+      (<code>X<sub>i,i+1</sub></code>, <code>X<sub>i+2,j</sub></code>),
+      and so on until
+      (<code>X<sub>i,j-1</sub></code>, <code>X<sub>j,j</sub></code>).</li>
+  <li>The running time of the CYK algorithm is O(<i>n</i><sup>3</sup>).</li>
+
+  </ul>
+
+
+ <h2>7. Practice Problems</h2>
+ <ol>
+  <li>Eliminate useless symbols from the following grammar:</li>
+<pre><code>S &#8594; AB | CA
+A &#8594; a
+B &#8594; BC | AB
+C &#8594; aB | b
+</code></pre>
+
+  <li>Put the following grammar into Chomsky Normal Form:</li>
+<pre><code>S &#8594; ASB | &#949;
+A &#8594; aAS | a
+B &#8594; BbS | A | bb
+C &#8594; aB | b
+</code></pre>
+
+  <li>Show that { <i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i> | <i>n</i> &#8805; 0 }
+      is not context free.
+  </li><li>Show that { <i>a<sup>n</sup>b<sup>n</sup>c<sup>i</sup></i> | <i>i</i> &#8804; <i>n</i> }
+      is not context free.
+  </li><li>Show that { <i>ss</i><sup>R</sup><i>s</i> | <i>s</i> is a string
+      of <i>a</i>'s and <i>b</i>'s } is not context free.
+  </li><li>(Hard) Show that the complement of { <i>ss</i> | <i>ss</i> is a string
+      of <i>a</i>'s and <i>b</i>'s } is context free.</li>
+ </ol>
+ 
+ <h2>8. Reading Assignment</h2>
+ <ul>
+  <li>HMU: Ch. 7</li>
+ </ul>
+<br>
+
+<hr>
+<address><a href="mailto:aho@cs.columbia.edu">aho@cs.columbia.edu</a></address>
+
+</body></html>

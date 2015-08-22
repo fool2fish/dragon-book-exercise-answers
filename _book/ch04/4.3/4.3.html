@@ -1,0 +1,1230 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Exercises for Section 4.3 | Compilers Principles, Techniques, &amp; Tools (purple dragon book) second edition exercise answers</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../ch04/4.4/4.4.html" />
+    
+    
+    <link rel="prev" href="../../ch04/4.2/4.2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="4.2" data-basepath="../.." data-revision="Sat Aug 22 2015 16:43:00 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 1.Introduction</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch01/1.1/1.1.html">
+            
+                
+                    <a href="../../ch01/1.1/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Exercises for Section 1.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01/1.3/1.3.html">
+            
+                
+                    <a href="../../ch01/1.3/1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Exercises for Section 1.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch01/1.6/1.6.html">
+            
+                
+                    <a href="../../ch01/1.6/1.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Exercises for Section 1.6
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> 2.A Simple Syntax-Directed Translator</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch02/2.2/2.2.html">
+            
+                
+                    <a href="../../ch02/2.2/2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Exercises for Section 2.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch02/2.3/2.3.html">
+            
+                
+                    <a href="../../ch02/2.3/2.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Exercises for Section 2.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ch02/2.4/2.4.html">
+            
+                
+                    <a href="../../ch02/2.4/2.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Exercises for Section 2.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch02/2.6/2.6.html">
+            
+                
+                    <a href="../../ch02/2.6/2.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Exercises for Section 2.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch02/2.8/2.8.html">
+            
+                
+                    <a href="../../ch02/2.8/2.8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Exercises for Section 2.8
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch02/key-point/key-point.html">
+            
+                
+                    <a href="../../ch02/key-point/key-point.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Key Point
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 3.Lexical Analysis</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch03/3.1/3.1.html">
+            
+                
+                    <a href="../../ch03/3.1/3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Exercises for Section 3.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch03/3.3/3.3.html">
+            
+                
+                    <a href="../../ch03/3.3/3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Exercises for Section 3.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch03/3.4/3.4.html">
+            
+                
+                    <a href="../../ch03/3.4/3.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Exercises for Section 3.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch03/3.5/3.5.html">
+            
+                
+                    <a href="../../ch03/3.5/3.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Exercises for Section 3.5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch03/3.6/3.6.html">
+            
+                
+                    <a href="../../ch03/3.6/3.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Exercises for Section 3.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch03/3.7/3.7.html">
+            
+                
+                    <a href="../../ch03/3.7/3.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Exercises for Section 3.7
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="ch03/3.8/3.8.html">
+            
+                
+                    <a href="../../ch03/3.8/3.8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Exercises for Section 3.8
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="ch03/3.9/3.9.html">
+            
+                
+                    <a href="../../ch03/3.9/3.9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        Exercises for Section 3.9
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="ch03/key-point/key-point.html">
+            
+                
+                    <a href="../../ch03/key-point/key-point.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Key Point
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 4.Syntax Analysis</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ch04/4.2/4.2.html">
+            
+                
+                    <a href="../../ch04/4.2/4.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Exercises for Section 4.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="ch04/4.3/4.3.html">
+            
+                
+                    <a href="../../ch04/4.3/4.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Exercises for Section 4.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch04/4.4/4.4.html">
+            
+                
+                    <a href="../../ch04/4.4/4.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Exercises for Section 4.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ch04/4.5/4.5.html">
+            
+                
+                    <a href="../../ch04/4.5/4.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Exercises for Section 4.5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch04/4.6/4.6.html">
+            
+                
+                    <a href="../../ch04/4.6/4.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Exercises for Section 4.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch04/4.7/4.7.html">
+            
+                
+                    <a href="../../ch04/4.7/4.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Exercises for Section 4.7
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch04/key-point/key-point.html">
+            
+                
+                    <a href="../../ch04/key-point/key-point.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Key Point
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> 5.Syntax-Directed Translation</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch05/5.1/5.1.html">
+            
+                
+                    <a href="../../ch05/5.1/5.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Exercises for Section 5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ch05/5.2/5.2.html">
+            
+                
+                    <a href="../../ch05/5.2/5.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Exercises for Section 5.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch05/5.3/5.3.html">
+            
+                
+                    <a href="../../ch05/5.3/5.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Exercises for Section 5.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="ch05/5.4/5.4.html">
+            
+                
+                    <a href="../../ch05/5.4/5.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Exercises for Section 5.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="ch05/5.5/5.5.html">
+            
+                
+                    <a href="../../ch05/5.5/5.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Exercises for Section 5.5
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> 6.Intermediate-Code Generation</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="ch06/6.1/6.1.html">
+            
+                
+                    <a href="../../ch06/6.1/6.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Exercises for Section 6.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="ch06/6.2/6.2.html">
+            
+                
+                    <a href="../../ch06/6.2/6.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Exercises for Section 6.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="ch06/6.3/6.3.html">
+            
+                
+                    <a href="../../ch06/6.3/6.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Exercises for Section 6.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="ch06/6.4/6.4.html">
+            
+                
+                    <a href="../../ch06/6.4/6.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Exercises for Section 6.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="ch06/6.5/6.5.html">
+            
+                
+                    <a href="../../ch06/6.5/6.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Exercises for Section 6.5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="ch06/6.6/6.6.html">
+            
+                
+                    <a href="../../ch06/6.6/6.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        Exercises for Section 6.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="ch06/6.7/6.7.html">
+            
+                
+                    <a href="../../ch06/6.7/6.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        Exercises for Section 6.7
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" >
+            
+            <span><b>7.</b> 7.Run-Time Environments</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="ch07/7.2/7.2.html">
+            
+                
+                    <a href="../../ch07/7.2/7.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Exercises for Section 7.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="ch07/7.3/7.3.html">
+            
+                
+                    <a href="../../ch07/7.3/7.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Exercises for Section 7.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="ch07/7.4/7.4.html">
+            
+                
+                    <a href="../../ch07/7.4/7.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Exercises for Section 7.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="ch07/7.5/7.5.html">
+            
+                
+                    <a href="../../ch07/7.5/7.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        Exercises for Section 7.5
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="ch07/7.6/7.6.html">
+            
+                
+                    <a href="../../ch07/7.6/7.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        Exercises for Section 7.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="ch07/7.7/7.7.html">
+            
+                
+                    <a href="../../ch07/7.7/7.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        Exercises for Section 7.7
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" >
+            
+            <span><b>8.</b> 8.Code Generation</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="ch08/8.2/8.2.html">
+            
+                
+                    <a href="../../ch08/8.2/8.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Exercises for Section 8.2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="ch08/8.3/8.3.html">
+            
+                
+                    <a href="../../ch08/8.3/8.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Exercises for Section 8.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="ch08/8.4/8.4.html">
+            
+                
+                    <a href="../../ch08/8.4/8.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Exercises for Section 8.4
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="ch08/8.5/8.5.html">
+            
+                
+                    <a href="../../ch08/8.5/8.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Exercises for Section 8.5
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" >
+            
+            <span><b>9.</b> 12.InterProcedural Analysis</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="ch12/12.3/12.3.html">
+            
+                
+                    <a href="../../ch12/12.3/12.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        Exercises for Section 12.3
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="ch12/12.7/12.7.html">
+            
+                
+                    <a href="../../ch12/12.7/12.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        Exercises for Section 12.3
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Compilers Principles, Techniques, &amp; Tools (purple dragon book) second edition exercise answers</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="4-3-%E8%8A%82%E7%9A%84%E7%BB%83%E4%B9%A0">4.3 &#x8282;&#x7684;&#x7EC3;&#x4E60;</h1>
+<h3 id="4-3-1">4.3.1</h3>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x53EA;&#x5305;&#x542B;&#x7B26;&#x53F7; a &#x548C; b &#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6587;&#x6CD5;&#x3002;&#x5B83;&#x4F7F;&#x7528; + &#x66FF;&#x4EE3;&#x8868;&#x793A;&#x5E76;&#x8FD0;&#x7B97;&#x7684;&#x5B57;&#x7B26; | &#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x548C;&#x6587;&#x6CD5;&#x4E2D;&#x4F5C;&#x4E3A;&#x5143;&#x7B26;&#x53F7;&#x4F7F;&#x7528;&#x7684;&#x7AD6;&#x7EBF;&#x76F8;&#x6DF7;&#x6DC6;&#xFF1A;</p>
+<pre><code>rexpr -&gt; rexpr + rterm | rterm
+rterm -&gt; rterm rfactor | rfactor
+rfactor -&gt; rfactor * | rprimary
+rprimary -&gt; a | b
+</code></pre><ol>
+<li>&#x5BF9;&#x8FD9;&#x4E2A;&#x6587;&#x6CD5;&#x63D0;&#x53D6;&#x5DE6;&#x516C;&#x56E0;&#x5B50;&#x3002;</li>
+<li>&#x63D0;&#x53D6;&#x5DE6;&#x516C;&#x56E0;&#x5B50;&#x7684;&#x53D8;&#x6362;&#x80FD;&#x4F7F;&#x8FD9;&#x4E2A;&#x6587;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x7684;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x6280;&#x672F;&#x5417;&#xFF1F;</li>
+<li>&#x63D0;&#x53D6;&#x5DE6;&#x516C;&#x56E0;&#x5B50;&#x4E4B;&#x540E;&#xFF0C;&#x4ECE;&#x539F;&#x6587;&#x6CD5;&#x4E2D;&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;&#x3002;</li>
+<li>&#x5F97;&#x5230;&#x7684;&#x6587;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x7684;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x5417;&#xFF1F;</li>
+</ol>
+<h4 id="%E8%A7%A3%E7%AD%94">&#x89E3;&#x7B54;</h4>
+<ol>
+<li>&#x65E0;&#x5DE6;&#x516C;&#x56E0;&#x5B50;</li>
+<li>&#x4E0D;&#x9002;&#x5408;</li>
+<li><p>&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;</p>
+<pre><code>    rexpr -&gt; rterm A
+        A -&gt; + rterm A | &#x3B5;
+    rterm -&gt; rfactor B
+        B -&gt; rfactor B | &#x3B5;
+  rfactor -&gt; rprimary C
+        C -&gt; * C | &#x3B5;
+ rprimary -&gt; a | b
+</code></pre></li>
+<li><p>&#x9002;&#x5408;&#xFF1F;</p>
+</li>
+</ol>
+<h3 id="4-3-2">4.3.2</h3>
+<p>&#x5BF9;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x6CD5;&#x91CD;&#x590D;&#x7EC3;&#x4E60; 4.3.1</p>
+<ol>
+<li>&#x7EC3;&#x4E60; 4.2.1 &#x7684;&#x6587;&#x6CD5;</li>
+<li>&#x7EC3;&#x4E60; 4.2.2-1 &#x7684;&#x6587;&#x6CD5;</li>
+<li>&#x7EC3;&#x4E60; 4.2.2-3 &#x7684;&#x6587;&#x6CD5;</li>
+<li>&#x7EC3;&#x4E60; 4.2.2-5 &#x7684;&#x6587;&#x6CD5;</li>
+<li>&#x7EC3;&#x4E60; 4.2.2-7 &#x7684;&#x6587;&#x6CD5;</li>
+</ol>
+<h4 id="%E8%A7%A3%E7%AD%94">&#x89E3;&#x7B54;</h4>
+<ol>
+<li><p>S -&gt; S S + | S S * | a</p>
+<ol>
+<li><p>&#x63D0;&#x53D6;&#x5DE6;&#x516C;&#x56E0;&#x5B50;</p>
+<pre><code> S -&gt; S S A | a
+ A -&gt; + | *
+</code></pre></li>
+<li><p>&#x4E0D;&#x9002;&#x5408;</p>
+</li>
+<li><p>&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;</p>
+<pre><code> // initial status
+ 1&#xFF09;S -&gt; S S A | a
+ 2) A -&gt; + | *
+
+ // i = 1
+ 1) S -&gt; a B
+ 2) B -&gt; S A B | &#x3B5;
+ 3) A -&gt; + | *
+
+ // i = 2, j = 1
+ 1) S -&gt; a B
+ 2) B -&gt; a B A B | &#x3B5;
+ 3) A -&gt; + | *
+
+ // i = 3, j = 1 ~ 2
+ // nothing changed
+</code></pre><ol>
+<li>&#x9002;&#x5408;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>S -&gt; 0 S 1 | 0 1</p>
+<ol>
+<li><p>&#x63D0;&#x53D6;&#x5DE6;&#x516C;&#x56E0;&#x5B50;</p>
+<pre><code> S -&gt; 0 A
+ A -&gt; S 1 | 1
+</code></pre></li>
+<li><p>&#x4E0D;&#x9002;&#x5408;&#xFF0C;&#x6709;&#x95F4;&#x63A5;&#x5DE6;&#x9012;&#x5F52;</p>
+</li>
+<li><p>&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;</p>
+<pre><code> // initial status
+ 1) S -&gt; 0 A
+ 2) A -&gt; S 1 | 1
+
+ // i = 1
+ // nothing changed
+
+ // i = 2, j = 1
+ 1) S -&gt; 0 A
+ 2) A -&gt; 0 A 1 | 1
+</code></pre><ol>
+<li>&#x5408;&#x9002;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>S -&gt; S (S) S | &#x3B5;</p>
+<ol>
+<li>&#x65E0;&#x5DE6;&#x516C;&#x56E0;&#x5B50;</li>
+<li>&#x4E0D;&#x5408;&#x9002;</li>
+<li><p>&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;</p>
+<pre><code> // initial status
+ 1) S -&gt; S (S) S | &#x3B5;
+
+ // i = 1
+ 1) S -&gt; A
+ 2) A -&gt; (S) S A | &#x3B5;
+
+ // i = 2, j = 1
+ // nothing changed
+</code></pre><ol>
+<li>&#x5408;&#x9002;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>S -&gt; (L) | a &#x4EE5;&#x53CA; L -&gt; L, S | S</p>
+<ol>
+<li>&#x65E0;&#x5DE6;&#x516C;&#x56E0;&#x5B50;</li>
+<li>&#x4E0D;&#x5408;&#x9002;</li>
+<li><p>&#x6D88;&#x9664;&#x5DE6;&#x9012;&#x5F52;</p>
+<pre><code> // initial status
+ 1) S -&gt; (L) | a
+ 2) L -&gt; L, S | S
+
+ // i = 1
+ // nothing changed
+
+ // i = 2, j = 1
+ 1) S -&gt; (L) | a
+ 2) L -&gt; (L) A | a A
+ 3) A -&gt; , S A | &#x3B5;
+
+ // i = 3, j = 1~2
+ // nothing changed
+</code></pre><ol>
+<li>&#x5408;&#x9002;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="4-3-3-%EF%BC%81">4.3.3 &#xFF01;</h3>
+<p>&#x4E0B;&#x9762;&#x6587;&#x6CD5;&#x7684;&#x76EE;&#x7684;&#x662F;&#x6D88;&#x9664; 4.3.2 &#x8282;&#x4E2D;&#x8BA8;&#x8BBA;&#x7684; &#x201C;&#x60AC;&#x7A7A;-else &#x4E8C;&#x4E49;&#x6027;&#x201D;&#xFF1A;</p>
+<pre><code>stmt -&gt; if expr then stmt
+      | matchedStmt
+matchedStmt -&gt; if expr then matchedStmt else stmt
+             | other
+</code></pre><p>&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x6587;&#x6CD5;&#x4ECD;&#x7136;&#x662F;&#x4E8C;&#x4E49;&#x6027;&#x7684;&#x3002;</p>
+<h4 id="%E8%A7%A3%E7%AD%94">&#x89E3;&#x7B54;</h4>
+<p>&#x770B;&#x4E00;&#x6BB5;&#x793A;&#x8303;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x7F29;&#x8FDB;&#x6765;&#x8868;&#x793A;&#x4EE3;&#x7801;&#x89E3;&#x6790;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;</p>
+<pre><code>if expr 
+then 
+    if expr 
+    then matchedStmt 
+    else
+        if expr
+        then matchedStmt
+else stmt
+</code></pre><p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x8FD8;&#x53EF;&#x4EE5;&#x88AB;&#x89E3;&#x6790;&#x6210;</p>
+<pre><code>if expr 
+then 
+    if expr 
+    then matchedStmt 
+    else
+        if expr
+        then matchedStmt
+        else stmt
+</code></pre><p>&#x6240;&#x4EE5;&#x8FD9;&#x4ECD;&#x7136;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x4E49;&#x6027;&#x7684;&#x6587;&#x6CD5;&#x3002;&#x539F;&#x56E0;&#x5728;&#x4E8E; <code>matchedStmt -&gt; if expr then matchedStmt else stmt</code> &#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A; <code>stmt</code>&#xFF0C;&#x5982;&#x679C;&#x5305;&#x542B; <code>else</code> &#x8BED;&#x53E5;&#x7684;&#x8BDD;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A; <code>stmt</code> &#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x5C5E;&#x4E8E;&#x5305;&#x542B;&#x8FD9;&#x4E2A; <code>matchedStmt</code> &#x7684;&#x8BED;&#x53E5;&#x7684;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../ch04/4.2/4.2.html" class="navigation navigation-prev " aria-label="Previous page: Exercises for Section 4.2"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../ch04/4.4/4.4.html" class="navigation navigation-next " aria-label="Next page: Exercises for Section 4.4"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
