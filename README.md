@@ -9,8 +9,8 @@
 
 ---
 
-- [Project Pages](http://jcf94.github.io/dragon-book-exercise-answers)
-- [Read the book](http://jcf94.github.io/dragon-book-exercise-answers/book)
+- [Project Pages](http://dragon-book.jcf94.com)
+- [Read the book](http://dragon-book.jcf94.com/book)
 
 ---
 
