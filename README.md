@@ -10,7 +10,6 @@
 ---
 
 - [Project Pages](http://dragon-book.jcf94.com)
-- [Read the book](http://dragon-book.jcf94.com/book)
 
 ---
 
