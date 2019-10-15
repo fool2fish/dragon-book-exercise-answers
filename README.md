@@ -1,5 +1,5 @@
 # Compilers Principles, Techniques, &amp; Tools (purple dragon book) second edition exercise answers
-# 编译原理（紫龙书）中文第2版习题答案
+# Compilation principle (Zilongshu) version 2 exercises answer
 
 [![Join the chat at https://gitter.im/fool2fish/dragon-book-exercise-answers](https://badges.gitter.im/fool2fish/dragon-book-exercise-answers.svg)](https://gitter.im/fool2fish/dragon-book-exercise-answers?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
