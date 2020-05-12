@@ -26,7 +26,7 @@
 
 以 2 + 5 - 9 为例
 
-![语法树和语法分析树](https://raw.github.com/fool2fish/dragon-book-practice-answer/master/ch02/key-point/assets/dragonbook-keypoint-2.2-2.png)
+![语法树和语法分析树](assets/dragonbook-keypoint-2.2-2.png)
 
 ### 3. 正则文法、上下文无关文法、上下文相关文法?
 
